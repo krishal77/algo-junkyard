@@ -15,8 +15,6 @@ int main() {
         for (int i = 0; i < y; i++) {
             cin >> fuel[i];
         }
-
-        int k = 0;
         int maxFuel = 0;
 
 
