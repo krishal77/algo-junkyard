@@ -16,10 +16,10 @@ int main(){
    }
 
    if(suma==sumb){
-    cout<<"YES";
+    cout<<"YES"<<endl;
    }
    else{
-    cout<<"NO";
+    cout<<"NO"<<endl;
    }
    t--;
 }
