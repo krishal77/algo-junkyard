@@ -1,4 +1,4 @@
-
+//author-krishal thapaliya
 #include<iostream>
 using namespace std;
 
