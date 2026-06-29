@@ -36,22 +36,14 @@ void dequeue()
         cout << "Queue is empty" << endl;
         return;
     }
-
+cout << "Dequeued Value : " << A[front] << endl;
     if (front == rear)
     {
         front = rear = -1;
     }
     else
     {
-        if (front == rear)
-        {
-            front = rear = -1;
-        }
-        else
-        {
-            cout << "Dequeued Value : " << A[front] << endl;
             front++;
-        }
     }
 }
 
@@ -63,6 +55,5 @@ int main()
     enqueue(4);
     enqueue(6);
     dequeue();
-
     return 0;
 }
