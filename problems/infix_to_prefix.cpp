@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <stack>
+#include <algorithm>
 using namespace std;
 
 int priority( char op)
@@ -57,11 +58,24 @@ while(!st.empty())
 }
 return ans;
 }
+string infixToPrefix(string s){
+    reverse(s.begin(), s.end());
+     for (int i = 0; i < s.length(); i++)
+    {
+        if (s[i] == '(')
+            s[i] = ')';
+        else if (s[i] == ')')
+            s[i] = '(';
+    }
+     string postfix = infixToPostfix(s);
+       reverse(postfix.begin(), postfix.end());
 
+    return postfix;
+}
 int main(){
 string express;
 cin>>express;
 
-string postfix= infixToPostfix(express);
+string postfix= infixToPrefix(express);
 cout << postfix << endl;
 }
