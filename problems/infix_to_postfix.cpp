@@ -42,7 +42,7 @@ while(i<n){
             st.pop();
       }
       else{
-        while(!st.empty() && st.top() != '(' && priority(s[i])<= priority(st.top())){
+        while(!st.empty() && priority(s[i])<= priority(st.top())){
             ans+=st.top();
             st.pop();
         }
